@@ -14,7 +14,7 @@ const requests = {
 
 const Articles = {
 	all: () =>
-		requests.get(`/articles`)
+		requests.get(`/articles?limit=100`)
 }
 
 export default {

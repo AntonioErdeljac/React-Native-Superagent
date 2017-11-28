@@ -1,5 +1,5 @@
 import React from "react";
-import {View, Text} from "react-native";
+import {View, Text, ScrollView} from "react-native";
 import {connect} from "react-redux";
 import agent from "../agent";
 
@@ -11,10 +11,12 @@ class Main extends React.Component{
 		if(this.props.articles){
 			return (
 				<View>
-					{this.props.articles.map(article => {
-						return <Text>{article.slug}</Text>
+				<ScrollView>
+					{this.props.articles.map((article, key) => {
+						return (<Text key={key}>{article.slug}</Text>)
 					})
 					}
+				</ScrollView>
 				</View>
 			);
 		}
