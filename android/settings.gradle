@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeSuperagent'
+
+include ':app'
